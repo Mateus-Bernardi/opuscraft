@@ -1,0 +1,101 @@
+.pianos-bg {
+  background: linear-gradient(to right, var(--color-0) 30%, var(--color-11) 0%);
+}
+
+.pianos {
+  display: flex;
+  gap: 40px;
+  padding-block: 60px;
+  background: url("../../img/dec/top-right.svg") no-repeat top 40px right 20px;
+}
+
+.pianos-imagem {
+  flex: 1;
+  position: relative;
+}
+
+.pianos-imagem span {
+  position: absolute;
+  background-color: var(--color-12);
+  color: aliceblue;
+  top: 20px;
+  right: 0px;
+  border-radius: 8px 0 0 8px;
+  padding: 8px 16px 8px 8px;
+}
+
+.pianos-conteudo {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: start;
+}
+
+.pianos-conteudo h2 {
+  grid-column: 1/-1;
+  margin-bottom: 20px;
+}
+
+.pianos-conteudo h2::before {
+  content: "";
+  background-color: var(--color-p1);
+  display: block;
+  width: 12px;
+  height: 8px;
+  margin-bottom: 8px;
+}
+
+.pianos-conteudo p {
+  grid-column: 1/-1;
+  margin-bottom: 32px;
+}
+
+.pianos-conteudo img {
+  width: 24px;
+}
+
+.pianos-conteudo ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.pianos-conteudo li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pianos a {
+  place-self: end;
+}
+
+@media (max-width: 800px) {
+  .pianos-bg {
+    background: var(--color-11);
+  }
+  .pianos {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pianos-conteudo {
+    flex-direction: column;
+  }
+  .pianos ul {
+    display: grid;
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+    grid-column: 1/-1;
+  }
+  .pianos a {
+    grid-column: 1/-1;
+    place-self: start;
+  }
+}
